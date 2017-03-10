@@ -1,0 +1,7 @@
+[user]
+	name = Ajay Gandhi
+	email = aag255@cornell.edu
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.dotfiles/git-ignore
