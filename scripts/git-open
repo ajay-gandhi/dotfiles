@@ -1,4 +1,7 @@
 #!/bin/bash
 # Assumes ssh, gets URL from list of remotes
+if [[ $# -gt 0 ]]; then
+  cd "$1"
+fi
 GP=$(git remote -v | head -1 | sed -e 's/.*github\.com:\(.*\) .*/\1/')
 open "http://github.com/$GP"
