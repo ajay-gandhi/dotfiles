@@ -1,0 +1,14 @@
+#!/bin/bash
+# Runs all the given commands in order on the last argument
+if [[ $# -eq 0 ]]; then
+  echo "Error: expected at least 3 arguments"
+  return
+fi
+
+array=( "$@" )
+last=${array[${#array[@]}-1]}
+unset "array[${#array[@]}-1]" # Removes last element
+for i in "${array[@]}"; do
+  "$i" "$last"
+done
+

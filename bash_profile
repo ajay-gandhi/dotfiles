@@ -11,7 +11,7 @@ bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
 
 # Add scripts dir to path
-export PATH=$PATH:~/Projects/scripts
+export PATH=$PATH:~/.dotfiles/scripts
 
 # Make prompts look cool :)
 export PS1="\[$(tput setaf 1)\][\[$(tput setaf 7)\]\u\[$(tput setaf 1)\]:\[$(tput setaf 7)\]\W\[$(tput setaf 1)\]]$\[$(tput sgr0)\] "

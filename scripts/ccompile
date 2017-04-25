@@ -1,0 +1,6 @@
+#!/bin/bash
+FULL_FILENAME=$(basename "$1")
+FILENAME="${FULL_FILENAME%.*}"
+C_FILE="$1"
+shift
+gcc -std=c99 -Wall -Werror "$@" "$C_FILE" -o "$FILENAME"
