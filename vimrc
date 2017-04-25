@@ -51,6 +51,7 @@ set autoindent
 set number
 set ruler
 set cursorline
+let &colorcolumn="81"
 
 " no wrapping
 set tw=0

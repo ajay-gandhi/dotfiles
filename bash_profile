@@ -1,4 +1,5 @@
 # Aliases for convenience
+alias a=". do-all"
 alias ls="ls"
 alias ll="ls -la"
 alias saf="open -a Safari"
