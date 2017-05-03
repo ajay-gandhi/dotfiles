@@ -22,6 +22,9 @@ filetype plugin indent on
 " set leader key
 let mapleader = "\<Space>"
 
+" escape
+inoremap jk <ESC>
+
 " key bindings
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
