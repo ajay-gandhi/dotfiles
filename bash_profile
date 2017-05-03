@@ -10,6 +10,9 @@ alias background="screen -d -m"
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
 
+# Always start in tmux
+[[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux && exit
+
 # Add scripts dir to path
 export PATH=$PATH:~/.dotfiles/scripts
 
@@ -37,7 +40,7 @@ _complete_ssh_hosts ()
 complete -F _complete_ssh_hosts ssh
 
 # For nvm
-export NVM_DIR="/Users/Ajay/.nvm"
-. "$NVM_DIR/nvm.sh"  # This loads nvm
-nvm use stable &> /dev/null
+# export NVM_DIR="/Users/Ajay/.nvm"
+# . "$NVM_DIR/nvm.sh"  # This loads nvm
+# nvm use stable &> /dev/null
 
