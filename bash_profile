@@ -11,7 +11,12 @@ bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
 
 # Always start in tmux
-[[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux && exit
+if command -v tmux>/dev/null; then
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux
+fi
+
+# Bind clear screen
+bind -x '"\C-p": clear'
 
 # Add scripts dir to path
 export PATH=$PATH:~/.dotfiles/scripts
