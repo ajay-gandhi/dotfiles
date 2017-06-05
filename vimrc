@@ -56,6 +56,9 @@ set ruler
 set cursorline
 let &colorcolumn="81"
 
+" always keep current line vertically centered
+set scrolloff=999
+
 " no wrapping
 set tw=0
 

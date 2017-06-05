@@ -11,9 +11,12 @@ bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
 
 # Always start in tmux
-if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux
-fi
+#if command -v tmux>/dev/null; then
+#  if [ -z "$TMUX" ]; then
+#    tmux new-session -t default || tmux new-session -s default
+#    return
+#  fi
+#fi
 
 # Bind clear screen
 bind -x '"\C-p": clear'
@@ -45,7 +48,10 @@ _complete_ssh_hosts ()
 complete -F _complete_ssh_hosts ssh
 
 # For nvm
-# export NVM_DIR="/Users/Ajay/.nvm"
-# . "$NVM_DIR/nvm.sh"  # This loads nvm
-# nvm use stable &> /dev/null
+n()
+{
+  export NVM_DIR="/Users/Ajay/.nvm"
+  . "$NVM_DIR/nvm.sh"  # This loads nvm
+  nvm use stable &> /dev/null
+}
 
