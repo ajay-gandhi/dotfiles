@@ -25,7 +25,11 @@ bind -x '"\C-p": clear'
 export PATH=$PATH:~/.dotfiles/scripts
 
 # Make prompts look cool :)
-export PS1="\[$(tput setaf 1)\][\[$(tput setaf 7)\]\u\[$(tput setaf 1)\]:\[$(tput setaf 7)\]\W\[$(tput setaf 1)\]]$\[$(tput sgr0)\] "
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  export PS1="\[$(tput setaf 2)\][\[$(tput setaf 7)\]\u\[$(tput setaf 2)\]:\[$(tput setaf 7)\]\W\[$(tput setaf 2)\]]$\[$(tput sgr0)\] "
+else
+  export PS1="\[$(tput setaf 1)\][\[$(tput setaf 7)\]\u\[$(tput setaf 1)\]:\[$(tput setaf 7)\]\W\[$(tput setaf 1)\]]$\[$(tput sgr0)\] "
+fi
 
 # Autocomplete ssh
 _complete_ssh_hosts ()
