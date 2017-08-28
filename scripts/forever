@@ -1,0 +1,17 @@
+#!/bin/bash
+# Runs the given command, and restarts it if it crashes
+
+if [[ $# -eq 0 ]] ; then
+  echo "No command provided."
+  exit 0
+fi
+
+restarts=0
+until $@; do
+  echo "Command '$@' crashed with exit code $?.  Respawning..." >&2
+  restarts=$((restarts+1))
+  sleep 1
+done
+
+echo "Finished. Restarted $restarts times."
+
