@@ -76,6 +76,10 @@ colorscheme chroma
 " set cursorline
 set term=screen-256color
 
+" JS template highlighting
+hi link javaScriptTemplateDelim String
+hi link javaScriptTemplateVar Text
+hi link javaScriptTemplateString String
 
 " airline setup
 let g:airline_theme = 'zenburn'
