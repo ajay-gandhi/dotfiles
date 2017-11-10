@@ -53,7 +53,6 @@ set autoindent
 " line / column numbers
 set number
 set ruler
-set cursorline
 let &colorcolumn="81"
 
 " always keep current line vertically centered
@@ -65,6 +64,8 @@ set tw=0
 " syntax highlighting
 syntax enable
 colorscheme chroma
+" do this through terminal, it's faster
+" set cursorline
 set term=screen-256color
 
 " merlin setup
