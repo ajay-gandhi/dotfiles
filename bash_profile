@@ -9,13 +9,14 @@ alias subl="open -a '/Applications/Sublime Text.app'"
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
 
-# Always start in tmux
-#if command -v tmux>/dev/null; then
-#  if [ -z "$TMUX" ]; then
-#    tmux new-session -t default || tmux new-session -s default
-#    return
-#  fi
-#fi
+# Delete word up to slash
+stty werase undef
+bind '\C-w:unix-filename-rubout'
+
+# Bash aliases file
+if [ -f ~/.bash_aliases ]; then
+  . ~/.dotfiles/bash_aliases
+fi
 
 # Bind clear screen
 bind -x '"\C-p": clear'
