@@ -1,12 +1,11 @@
 # Aliases for convenience
 alias a=". do-all"
-alias ls="ls"
+alias ls="ls -p"
 alias ll="ls -la"
 alias saf="open -a Safari"
 alias subl="open -a '/Applications/Sublime Text.app'"
-alias background="screen -d -m"
 
-# Bash case insensitive tab completion
+# Case insensitive tab completion
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
 
