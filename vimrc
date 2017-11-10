@@ -85,11 +85,16 @@ hi link javaScriptTemplateString String
 let g:multi_cursor_quit_key='q'
 let g:multi_cursor_insert_maps={'j':1}
 
+" nerdtree
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" nerdcommenter setup
+let g:NERDSpaceDelims=1
+
 " airline setup
 let g:airline_theme = 'zenburn'
 
 " easymotion setup
-let g:Easymotion_smartcase = 1
 map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 map ? <Plug>(easymotion-sn)
