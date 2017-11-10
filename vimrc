@@ -101,24 +101,20 @@ map ? <Plug>(easymotion-sn)
 omap ? <Plug>(easymotion-tn)
 
 " ctrlp setup
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '.(git|hg|svn)$|_build$',
-  \ }
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+" let g:ctrlp_map = '<c-p>'
+" let g:ctrlp_cmd = 'CtrlP'
+" let g:ctrlp_working_path_mode = 'ra'
+" set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+" let g:ctrlp_custom_ignore = {
+  " \ 'dir':  '.(git|hg|svn)$|_build$',
+  " \ }
+" let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " vagrantfile settings
-autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
-
-" cupfile settings
-autocmd BufRead,BufNewFile *.cup set filetype=cup
-autocmd FileType cup setlocal shiftwidth=4 softtabstop=4 expandtab
+" autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
 
 " java settings
-autocmd FileType java setlocal shiftwidth=4 softtabstop=4 expandtab
+" autocmd FileType java setlocal shiftwidth=4 softtabstop=4 expandtab
 
 " python settings
-autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
+" autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
