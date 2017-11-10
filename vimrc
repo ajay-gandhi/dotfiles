@@ -61,6 +61,11 @@ set scrolloff=999
 " no wrapping
 set tw=0
 
+" code folding
+set foldmethod=indent
+set foldlevel=99
+" set foldclose=all
+
 " syntax highlighting
 syntax enable
 colorscheme chroma
