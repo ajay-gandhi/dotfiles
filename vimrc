@@ -81,6 +81,10 @@ hi link javaScriptTemplateDelim String
 hi link javaScriptTemplateVar Text
 hi link javaScriptTemplateString String
 
+" multicursor setup
+let g:multi_cursor_quit_key='q'
+let g:multi_cursor_insert_maps={'j':1}
+
 " airline setup
 let g:airline_theme = 'zenburn'
 
