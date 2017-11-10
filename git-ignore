@@ -17,6 +17,7 @@ Icon
 .idea/
 CMakeLists.txt
 node_modules/
+.fullClasspath
 
 # C
 *.o
