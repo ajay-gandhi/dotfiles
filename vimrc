@@ -33,8 +33,6 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>e :e
 
-nnoremap <Leader><Up> <C-W>+
-
 " remove trailing whitespaces
 fun! <SID>StripTrailingWhitespaces()
   let l = line(".")
