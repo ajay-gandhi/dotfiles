@@ -76,9 +76,6 @@ colorscheme chroma
 " set cursorline
 set term=screen-256color
 
-" merlin setup
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
 " airline setup
 let g:airline_theme = 'zenburn'
@@ -106,9 +103,6 @@ autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
 " cupfile settings
 autocmd BufRead,BufNewFile *.cup set filetype=cup
 autocmd FileType cup setlocal shiftwidth=4 softtabstop=4 expandtab
-
-" xi settings
-autocmd BufRead,BufNewFile *.xi set filetype=xi
 
 " java settings
 autocmd FileType java setlocal shiftwidth=4 softtabstop=4 expandtab
