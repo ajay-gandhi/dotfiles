@@ -14,7 +14,7 @@ stty werase undef
 bind '\C-w:unix-filename-rubout'
 
 # Bash aliases file
-if [ -f ~/.bash_aliases ]; then
+if [ -f ~/.dotfiles/bash_aliases ]; then
   . ~/.dotfiles/bash_aliases
 fi
 
