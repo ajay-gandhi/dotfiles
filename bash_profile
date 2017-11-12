@@ -24,6 +24,10 @@ bind -x '"\C-p": clear'
 # Add scripts dir to path
 export PATH=$PATH:~/.dotfiles/scripts
 
+# Set default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # Make prompts look cool :)
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   export PS1="\[$(tput setaf 2)\][\[$(tput setaf 7)\]\u\[$(tput setaf 2)\]:\[$(tput setaf 7)\]\W\[$(tput setaf 2)\]]$\[$(tput sgr0)\] "
