@@ -51,6 +51,9 @@ set softtabstop=2
 set shiftwidth=2
 set autoindent
 
+" macro to auto indent surrounding lines
+nnoremap ii mq10k=20j`q
+
 " line / column numbers
 set number
 set ruler
