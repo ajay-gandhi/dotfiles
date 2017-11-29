@@ -18,6 +18,7 @@ Icon
 CMakeLists.txt
 node_modules/
 .fullClasspath
+.netrwhist
 
 # C
 *.o
