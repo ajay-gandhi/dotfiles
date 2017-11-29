@@ -96,6 +96,8 @@ let g:NERDSpaceDelims=1
 let g:airline_theme = 'zenburn'
 
 " easymotion setup
+" search by selection in visual mode
+vnoremap <expr> // 'y/\V'.escape(@",'\').'<CR>'
 map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 map ? <Plug>(easymotion-sn)
