@@ -10,6 +10,8 @@ git clone https://github.com/ajay-gandhi/dotfiles.git ~/.dotfiles
 bash ~/.dotfiles/install.sh
 ```
 
+3. [Optional] Install [Fira Code](https://github.com/tonsky/FiraCode)
+
 ## Bash scripts
 
 The `scripts/` directory is a set of bash scripts that is added to my `$PATH`.
