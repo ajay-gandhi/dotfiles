@@ -52,15 +52,15 @@ set shiftwidth=2
 set autoindent
 
 " macro to auto indent surrounding lines
-nnoremap ii mq10k=20j`q
+nnoremap ff mq10k=20j`q
 
 " line / column numbers
 set number
 set ruler
 let &colorcolumn="81"
 
-" always keep current line vertically centered
-set scrolloff=999
+" disable comment continuation
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " no wrapping
 set tw=0
@@ -83,7 +83,7 @@ hi link javaScriptTemplateVar Text
 hi link javaScriptTemplateString String
 
 " multicursor setup
-let g:multi_cursor_quit_key='q'
+let g:multi_cursor_quit_key='<C-q>'
 let g:multi_cursor_insert_maps={'j':1}
 
 " nerdtree
