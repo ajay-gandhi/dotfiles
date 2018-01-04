@@ -62,6 +62,9 @@ let &colorcolumn="81"
 " disable comment continuation
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" change current directory to current file
+autocmd BufEnter * silent! lcd %:p:h
+
 " no wrapping
 set tw=0
 
