@@ -18,6 +18,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-fugitive'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'bogado/file-line'
 
 call vundle#end()
 filetype plugin indent on
@@ -78,6 +79,7 @@ syntax enable
 colorscheme chroma
 " do this through terminal, it's faster
 " set cursorline
+set scrolloff=999
 set term=screen-256color
 
 " JS template highlighting
@@ -86,7 +88,7 @@ hi link javaScriptTemplateVar Text
 hi link javaScriptTemplateString String
 
 " multicursor setup
-let g:multi_cursor_quit_key='<C-q>'
+let g:multi_cursor_quit_key="<C-e>"
 let g:multi_cursor_insert_maps={'j':1}
 
 " nerdtree
