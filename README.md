@@ -2,7 +2,7 @@
 
 ## Install
 
-1. Install [vundle](https://github.com/VundleVim/Vundle.vim).
+1. Install [vundle](https://github.com/VundleVim/Vundle.vim)
 2. Clone repo and run install script:
 
 ```bash
@@ -10,7 +10,8 @@ git clone https://github.com/ajay-gandhi/dotfiles.git ~/.dotfiles
 bash ~/.dotfiles/install.sh
 ```
 
-3. [Optional] Install [Fira Code](https://github.com/tonsky/FiraCode)
+3. Launch vim and run `:PluginInstall`
+4. [Optional] Install [Fira Code](https://github.com/tonsky/FiraCode)
 
 ## Bash scripts
 

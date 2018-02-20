@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/Ajay/Library/Application Support/Sublime Text 3/Packages/User'
-let g:netrw_dirhist_2='/Users/Ajay/Projects/pl/a9/debruijn/tests'
-let g:netrw_dirhist_3='/Users/Ajay/.dotfiles'
