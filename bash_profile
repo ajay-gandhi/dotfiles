@@ -58,7 +58,7 @@ complete -F _complete_ssh_hosts ssh
 # For nvm
 n()
 {
-  export NVM_DIR="/Users/Ajay/.nvm"
+  export NVM_DIR="$HOME/.nvm"
   . "$NVM_DIR/nvm.sh"  # This loads nvm
   nvm use stable &> /dev/null
 }
