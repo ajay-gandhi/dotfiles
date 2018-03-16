@@ -18,7 +18,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-fugitive'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'bogado/file-line'
+Plugin 'kopischke/vim-fetch'
 
 call vundle#end()
 filetype plugin indent on
@@ -77,6 +77,7 @@ set foldlevel=99
 " syntax highlighting
 syntax enable
 colorscheme chroma
+highlight Normal ctermbg=NONE
 " do this through terminal, it's faster
 " set cursorline
 set scrolloff=999
