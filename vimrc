@@ -79,7 +79,7 @@ syntax enable
 colorscheme chroma
 highlight Normal ctermbg=NONE
 " do this through terminal, it's faster
-" set cursorline
+set cursorline
 set scrolloff=999
 set term=screen-256color
 
