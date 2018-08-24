@@ -4,6 +4,7 @@ alias ls="ls -p"
 alias ll="ls -la"
 alias saf="open -a Safari"
 alias subl="open -a '/Applications/Sublime Text.app'"
+alias serve="python -m SimpleHTTPServer"
 
 # Case insensitive tab completion
 bind "set completion-ignore-case on"
@@ -28,12 +29,51 @@ export PATH=$PATH:~/.dotfiles/scripts
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# Make prompts look cool :)
+################################# Bash prompt ##################################
+
+# The fancy bash prompt requires:
+#   - Patched fonts
+#   - Color terminal
+# See the readme for more information
+
+# Basic prompt
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   export PS1="\[$(tput setaf 2)\][\[$(tput setaf 7)\]\u\[$(tput setaf 2)\]:\[$(tput setaf 7)\]\W\[$(tput setaf 2)\]]$\[$(tput sgr0)\] "
 else
   export PS1="\[$(tput setaf 1)\][\[$(tput setaf 7)\]\u\[$(tput setaf 1)\]:\[$(tput setaf 7)\]\W\[$(tput setaf 1)\]]$\[$(tput sgr0)\] "
 fi
+
+# Fancy prompt
+# parse_git_branch() {
+  # git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+# }
+# curTime() {
+  # date +"%l:%M:%S%p" | awk '{print tolower($0)}'
+# }
+# # Usage: chClr bg fg
+# chClr() {
+  # echo -e "\\033[48;5;${1};38;5;${2}m"
+# }
+# in_git() {
+  # local dir=$PWD
+  # until [[ $dir == / ]]; do
+    # [[ -d "$dir/.git" ]] && return 0
+    # dir=$(dirname "$dir")
+  # done
+  # return 1
+# }
+# # These determine the color scheme, in order (first, second, third)
+# if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  # fClr="22"
+  # sClr="28"
+  # tClr="34"
+# else
+  # fClr="19"
+  # sClr="21"
+  # tClr="27"
+# fi
+# arrow=$'\xEE\x82\xB0'
+# export PS1=$'$(chClr $fClr 231)$(curTime) $(chClr $sClr $fClr)█${arrow} $(chClr $sClr 231)\W $(in_git && echo -e $(chClr $tClr $sClr)${arrow} $(chClr $tClr 231)\xEE\x82\xA0 $(parse_git_branch) $(chClr 16 $tClr)${arrow} || echo -e $(chClr 16 $sClr)${arrow})\\033[0m '
 
 # Autocomplete ssh
 _complete_ssh_hosts ()
@@ -62,4 +102,3 @@ n()
   . "$NVM_DIR/nvm.sh"  # This loads nvm
   nvm use stable &> /dev/null
 }
-
