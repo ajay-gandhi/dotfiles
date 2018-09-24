@@ -52,6 +52,9 @@ set softtabstop=2
 set shiftwidth=2
 set autoindent
 
+" different indentation for cpp
+autocmd Filetype cpp setlocal ts=4 sw=4
+
 " macro to auto indent surrounding lines
 nnoremap ff mq10k=20j`q
 
