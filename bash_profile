@@ -32,10 +32,10 @@ export EDITOR="$VISUAL"
 ################################# Bash prompt ##################################
 
 parse_git_branch() {
-  git branch | grep \* | cut -d ' ' -f2  | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[mGK]//g"
+  git branch 2>/dev/null | grep '^*' | colrm 1 2
 }
 curTime() {
-  date +"%l:%M:%S%p" | awk '{print tolower($0)}'
+  date +"%I:%M:%S%p" | awk '{print tolower($0)}'
 }
 # Usage: chClr fgColor
 chClr() {
