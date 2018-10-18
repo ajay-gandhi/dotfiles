@@ -32,7 +32,7 @@ export EDITOR="$VISUAL"
 ################################# Bash prompt ##################################
 
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+  git branch | grep \* | cut -d ' ' -f2  | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[mGK]//g"
 }
 curTime() {
   date +"%l:%M:%S%p" | awk '{print tolower($0)}'
