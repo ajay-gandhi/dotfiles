@@ -8,9 +8,5 @@ cd $dir
 for file in $files; do
   ln -s $dir/$file ~/.$file
 done
-if pushd ~/.vim/colors; then
-  ln -s $dir/chroma.vim ~/.vim/colors/chroma.vim
-else
-  echo "Couldn't install vim color scheme, ~/.vim/colors directory missing\n"
-fi
-
+mkdir -p ~/.vim/colors
+ln -s $dir/chroma.vim ~/.vim/colors/chroma.vim
