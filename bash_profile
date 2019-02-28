@@ -55,7 +55,7 @@ if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
 else
   clr="1"
 fi
-export PS1=$'$(chClr $clr)[$(chClr 7)$(curTime)$(chClr $clr) in $(chClr 7)\W$(in_git && echo -e $(chClr $clr) on $(chClr 7)$(parse_git_branch)$(chClr $clr)]$ || echo -e $(chClr $clr)]$)\\033[0m '
+export PS1='$(chClr $clr)[$(chClr 7)$(curTime)$(chClr $clr) in $(chClr 7)\W$(in_git && echo -e $(chClr $clr) on $(chClr 7)$(parse_git_branch)$(chClr $clr)]$ || echo -e $(chClr $clr)]$)$(chClr 7) '
 
 # Autocomplete ssh
 _complete_ssh_hosts ()
