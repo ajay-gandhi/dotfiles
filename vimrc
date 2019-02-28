@@ -52,6 +52,9 @@ set softtabstop=2
 set shiftwidth=2
 set autoindent
 
+" different indentation for cpp
+autocmd Filetype cpp setlocal ts=4 sw=4
+
 " macro to auto indent surrounding lines
 nnoremap ff mq10k=20j`q
 
@@ -64,7 +67,7 @@ let &colorcolumn="81"
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " change current directory to current file
-autocmd BufEnter * silent! lcd %:p:h
+" autocmd BufEnter * silent! lcd %:p:h
 
 " no wrapping
 set tw=0
@@ -79,7 +82,7 @@ syntax enable
 colorscheme chroma
 highlight Normal ctermbg=NONE
 " do this through terminal, it's faster
-" set cursorline
+set cursorline
 set scrolloff=999
 set term=screen-256color
 

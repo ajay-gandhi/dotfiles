@@ -19,6 +19,7 @@ CMakeLists.txt
 node_modules/
 .fullClasspath
 .netrwhist
+.*.swp
 
 # C
 *.o

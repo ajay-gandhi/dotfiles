@@ -24,3 +24,4 @@ The `scripts/` directory is a set of bash scripts that is added to my `$PATH`.
                sometimes even my username, when cloning repos
 * `git-open`:  Opens the GitHub URL for the current repo
 * `P`:         Shortcut for pandocing latex files to pdf
+
