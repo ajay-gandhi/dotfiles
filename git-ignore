@@ -23,3 +23,6 @@ node_modules/
 # C
 *.o
 *.gch
+
+# vim
+*.swp
