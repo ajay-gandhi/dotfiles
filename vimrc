@@ -19,6 +19,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'kopischke/vim-fetch'
+Plugin 'inkarkat/vim-mark'
+Plugin 'inkarkat/vim-ingo-library' " this is needed for vim-mark :eyes:
 
 call vundle#end()
 filetype plugin indent on
