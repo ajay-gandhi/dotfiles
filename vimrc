@@ -21,6 +21,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'kopischke/vim-fetch'
 Plugin 'inkarkat/vim-mark'
 Plugin 'inkarkat/vim-ingo-library' " this is needed for vim-mark :eyes:
+Plugin 'aonemd/kuroi.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -81,7 +82,8 @@ set foldlevel=99
 
 " syntax highlighting
 syntax enable
-colorscheme chroma
+set background=dark
+colorscheme kuroi
 highlight Normal ctermbg=NONE
 " do this through terminal, it's faster
 set cursorline
