@@ -1,9 +1,7 @@
 # Aliases for convenience
-alias a=". do-all"
 alias ls="ls -p"
 alias ll="ls -la"
 alias saf="open -a Safari"
-alias subl="open -a '/Applications/Sublime Text.app'"
 alias serve="python -m SimpleHTTPServer"
 
 # Case insensitive tab completion
@@ -17,6 +15,11 @@ bind '\C-w:unix-filename-rubout'
 # Bash aliases file
 if [ -f ~/.dotfiles/bash_aliases ]; then
   . ~/.dotfiles/bash_aliases
+fi
+
+# Other commands file
+if [ -f ~/.bash_local ]; then
+  . ~/.bash_local
 fi
 
 # Bind clear screen
@@ -78,8 +81,7 @@ _complete_ssh_hosts ()
 complete -F _complete_ssh_hosts ssh
 
 # For nvm
-n()
-{
+n() {
   export NVM_DIR="$HOME/.nvm"
   . "$NVM_DIR/nvm.sh"  # This loads nvm
   nvm use stable &> /dev/null

@@ -8,19 +8,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ervandew/supertab'
-" Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'easymotion/vim-easymotion'
-" Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-fugitive'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'kopischke/vim-fetch'
-Plugin 'inkarkat/vim-mark'
-Plugin 'inkarkat/vim-ingo-library' " this is needed for vim-mark :eyes:
 Plugin 'aonemd/kuroi.vim'
 
 call vundle#end()
@@ -64,7 +60,7 @@ nnoremap ff mq10k=20j`q
 " line / column numbers
 set number
 set ruler
-let &colorcolumn="81"
+set colorcolumn=81
 
 " disable comment continuation
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -89,6 +85,7 @@ highlight Normal ctermbg=NONE
 set cursorline
 set scrolloff=999
 set term=screen-256color
+hi ColorColumn ctermbg=darkgray
 
 " JS template highlighting
 hi link javaScriptTemplateDelim String
