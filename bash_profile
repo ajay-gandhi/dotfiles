@@ -1,7 +1,6 @@
 # Aliases for convenience
 alias ls="ls -p"
 alias ll="ls -la"
-alias saf="open -a Safari"
 alias serve="python -m SimpleHTTPServer"
 
 # Case insensitive tab completion
@@ -18,8 +17,8 @@ if [ -f ~/.dotfiles/bash_aliases ]; then
 fi
 
 # Other commands file
-if [ -f ~/.bash_local ]; then
-  . ~/.bash_local
+if [ -f ~/.bash_locals ]; then
+  . ~/.bash_locals
 fi
 
 # Bind clear screen
