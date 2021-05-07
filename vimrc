@@ -22,10 +22,10 @@ Plugin 'aonemd/kuroi.vim'
 call vundle#end()
 filetype plugin indent on
 
-" set leader key
+" set leader (prefix) key
 let mapleader = "\<Space>"
 
-" escape
+" remap escape
 inoremap jk <ESC>
 
 " key bindings
@@ -33,7 +33,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>e :e
 
-" remove trailing whitespaces
+" remove trailing whitespaces on save
 fun! <SID>StripTrailingWhitespaces()
   let l = line(".")
   let c = col(".")
@@ -42,7 +42,7 @@ fun! <SID>StripTrailingWhitespaces()
   endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-" status line
+" number of rows in status line
 set laststatus=2
 
 " tab configs
@@ -50,9 +50,6 @@ set expandtab
 set softtabstop=2
 set shiftwidth=2
 set autoindent
-
-" different indentation for cpp
-autocmd Filetype cpp setlocal ts=4 sw=4
 
 " macro to auto indent surrounding lines
 nnoremap ff mq10k=20j`q
@@ -71,17 +68,15 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " no wrapping
 set tw=0
 
-" code folding
+" automatically create code folds
 set foldmethod=indent
 set foldlevel=99
-" set foldclose=all
 
 " syntax highlighting
 syntax enable
 set background=dark
 colorscheme kuroi
 highlight Normal ctermbg=NONE
-" do this through terminal, it's faster
 set cursorline
 set scrolloff=999
 set term=screen-256color
@@ -95,9 +90,6 @@ hi link javaScriptTemplateString String
 " multicursor setup
 let g:multi_cursor_quit_key="<C-e>"
 let g:multi_cursor_insert_maps={'j':1}
-
-" nerdtree
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " nerdcommenter setup
 let g:NERDSpaceDelims=1
@@ -121,11 +113,11 @@ omap ? <Plug>(easymotion-tn)
   " \ }
 " let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
-" vagrantfile settings
-" autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
-
 " java settings
-" autocmd FileType java setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType java setlocal shiftwidth=4 softtabstop=4 expandtab
 
 " python settings
-" autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
+
+" c++ settings
+autocmd Filetype cpp setlocal ts=4 sw=4
