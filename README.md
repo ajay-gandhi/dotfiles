@@ -13,6 +13,10 @@ bash ~/.dotfiles/install.sh
 3. Launch vim and run `:PluginInstall`
 4. [Optional] Install [Fira Code](https://github.com/tonsky/FiraCode)
 
+## Bash prompt
+
+Color code reference: https://talyian.github.io/ansicolors/
+
 ## Bash scripts
 
 The `scripts/` directory is a set of bash scripts that is added to my `$PATH`.

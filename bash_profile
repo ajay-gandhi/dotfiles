@@ -33,31 +33,26 @@ export EDITOR="$VISUAL"
 
 ################################# Bash prompt ##################################
 
-parse_git_branch() {
-  git branch 2>/dev/null | grep '^*' | colrm 1 2
+show_git_branch() {
+  local dir=$PWD
+  until [[ $dir == / ]]; do
+    [[ -d "$dir/.git" ]] && git branch 2>/dev/null | grep '^*' | colrm 1 2 | sed -e 's/^/ ᚶ/;'
+    dir=$(dirname "$dir")
+  done
+}
+show_ssh_host() {
+  if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    hostname | sed -e 's/$/:/;'
+  fi
 }
 curTime() {
   date +"%I:%M:%S%p" | awk '{print tolower($0)}'
 }
-# Usage: chClr fgColor
-chClr() {
-  echo -e "\x01$(tput setaf $1)\x02"
-}
-in_git() {
-  local dir=$PWD
-  until [[ $dir == / ]]; do
-    [[ -d "$dir/.git" ]] && return 0
-    dir=$(dirname "$dir")
-  done
-  return 1
-}
-# These determine the color scheme for in ssh and not in ssh
-if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-  clr="2"
-else
-  clr="1"
-fi
-export PS1='$(chClr $clr)[$(chClr 7)$(curTime)$(chClr $clr) in $(chClr 7)\W$(in_git && echo -e $(chClr $clr) on $(chClr 7)$(parse_git_branch)$(chClr $clr)]$ || echo -e $(chClr $clr)]$)$(chClr 7) '
+SHADE1="\[\033[38;5;83m\]"
+SHADE2="\[\033[38;5;120m\]"
+SHADE3="\[\033[38;5;157m\]"
+RESET="\[$(tput sgr0)\]"
+export PS1="$SHADE1$(show_ssh_host)\w$SHADE2 ◷$(curTime)$SHADE3$(show_git_branch)$RESET\n$ "
 
 # Autocomplete ssh
 _complete_ssh_hosts ()
