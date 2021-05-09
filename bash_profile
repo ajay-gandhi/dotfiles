@@ -34,7 +34,7 @@ export EDITOR="$VISUAL"
 ################################# Bash prompt ##################################
 
 show_git_branch() {
-  git symbolic-ref --short HEAD 2>/dev/null | sed -e 's/^/ ᚶ/;'
+  git symbolic-ref --short HEAD 2>/dev/null | sed -e 's/^/ ᚶ[/;' | sed -e 's/$/]/;'
 }
 show_ssh_host() {
   if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
@@ -48,7 +48,7 @@ SHADE1="\[\033[38;5;83m\]"
 SHADE2="\[\033[38;5;120m\]"
 SHADE3="\[\033[38;5;157m\]"
 RESET="\[$(tput sgr0)\]"
-PS1="$SHADE1$(show_ssh_host)\w$SHADE2 ◷\$(curTime)$SHADE3\$(show_git_branch)$RESET\n$ "
+PS1="${SHADE1}◷[\$(curTime)] $SHADE2[$(show_ssh_host)\W]$SHADE3\$(show_git_branch)$RESET> "
 
 # Autocomplete ssh
 _complete_ssh_hosts ()
