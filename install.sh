@@ -2,7 +2,7 @@
 # Creates symlinks for dotfiles in this directory
 
 dir=~/.dotfiles
-files="vimrc gitconfig bash_profile tmux.conf"
+files="vimrc gitconfig bash_profile zshrc tmux.conf"
 
 cd $dir
 for file in $files; do
