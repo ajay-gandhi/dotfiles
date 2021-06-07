@@ -27,6 +27,19 @@ fi
 # Bind clear screen
 bindkey '^P' clear-screen
 
+# Bind up and down
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
+# History improvements
+export HISTSIZE=100000
+export SAVEHIST=100000
+setopt share_history        # share it across sessions
+setopt extended_history     # add timestamps to history
+setopt hist_ignore_all_dups # don't record dupes in history
+setopt hist_ignore_space    # remove lines starting with space
+setopt hist_reduce_blanks
+
 # Add scripts dir to path
 export PATH=$PATH:~/.dotfiles/scripts
 
