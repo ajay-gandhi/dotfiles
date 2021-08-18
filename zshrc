@@ -1,6 +1,6 @@
 # Aliases for convenience
 alias ls="ls -p"
-alias ll="ls -la"
+alias ll="ls -lha"
 alias serve="python -m SimpleHTTPServer"
 
 # Case insensitive tab completion
@@ -14,7 +14,7 @@ backward-kill-dir () {
 zle -N backward-kill-dir
 bindkey '^[^?' backward-kill-dir
 
-# Bash aliases file
+# Aliases file
 if [ -f ~/.dotfiles/aliases ]; then
   . ~/.dotfiles/aliases
 fi

@@ -1,6 +1,6 @@
 # Aliases for convenience
 alias ls="ls -p"
-alias ll="ls -la"
+alias ll="ls -lha"
 alias serve="python -m SimpleHTTPServer"
 
 # Case insensitive tab completion
