@@ -5,3 +5,7 @@
 	default = simple
 [core]
 	excludesfile = ~/.dotfiles/git-ignore
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
