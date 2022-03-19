@@ -1,7 +1,7 @@
 # Aliases for convenience
 alias ls="ls -p"
 alias ll="ls -lha"
-alias serve="python3 -m SimpleHTTPServer"
+alias serve="python3 -m http.server"
 
 # Case insensitive tab completion
 bind "set completion-ignore-case on"
